@@ -38,7 +38,7 @@ Namespace App.Controllers
         End Function
 
         Public Function [Get] (Of TIdentity)(id As TIdentity) As Todo Implements IController(Of Todo).[Get]
-            Throw New NotImplementedException
+            Return _database.Get(Of Todo, TIdentity)(id)
         End Function
         
         Public Function GetTodosOf(ByVal todoListId As Long, ByVal Optional type As TodoType = TodoType.UnCompleted) As IEnumerable(Of Todo)

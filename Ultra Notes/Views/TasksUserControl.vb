@@ -80,7 +80,6 @@ Namespace Views
             If (e.Selected) Then
                 ' show it
                 ShowTodosControls()
-                
                 ' load todos
                 LoadTodos()
             End If
@@ -88,10 +87,8 @@ Namespace Views
         
         Private Sub LoadTodos() 
             _todos = TodoController.Instance.GetTodosOf(_selectedTodoList.Id, Me.TodoType)
-            
             TodosPanel.Controls.Clear()
-            
-            Dim topSpace As Integer = 7
+            Dim topSpace = 7
             For Each t As Todo In _todos
                 Dim item As New TodoItem(t) With{.Top = topSpace, .Left = 7}
                 AddHandler item.TodoItemUpdate, AddressOf Me.TodoUpdateHandler
@@ -100,7 +97,6 @@ Namespace Views
                 TodosPanel.Controls.Add(item)
                 topSpace += item.Height + 4
             Next
-            
         End Sub
 
         Private Sub TodoCompletedHandler(sender As Object, e As TodoEventArgs)
