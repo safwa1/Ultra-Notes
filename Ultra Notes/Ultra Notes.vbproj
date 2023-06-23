@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7B96027D-0834-459F-AF42-36805B180972}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Ultra_Notes.My.MyApplication</StartupObject>
+    <RootNamespace>Ultra_Notes</RootNamespace>
+    <AssemblyName>Ultra Notes</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Ultra Notes.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Ultra Notes.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>Ultra Notes.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>Ultra Notes.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>Ultra Notes.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>Ultra Notes.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icons_goodnotes.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.138\lib\net461\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper.Contrib, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.Contrib.2.0.78\lib\net461\Dapper.Contrib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Sqlite, Version=7.0.7.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Sqlite.Core.7.0.7\lib\netstandard2.0\Microsoft.Data.Sqlite.dll</HintPath>
+    </Reference>
+    <Reference Include="SafwanUiKit">
+      <HintPath>..\..\..\..\RiderProjects\SafwanUiKit\SafwanUiKit\bin\Release\SafwanUiKit.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_v2, Version=2.1.5.1964, Culture=neutral, PublicKeyToken=8226ea5df37bcae9, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.bundle_e_sqlite3.2.1.5\lib\net461\SQLitePCLRaw.batteries_v2.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.core, Version=2.1.5.1964, Culture=neutral, PublicKeyToken=1488e028ca7ab535, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.core.2.1.5\lib\netstandard2.0\SQLitePCLRaw.core.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.provider.dynamic_cdecl, Version=2.1.5.1964, Culture=neutral, PublicKeyToken=b68184102cba0b3b, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.provider.dynamic_cdecl.2.1.5\lib\netstandard2.0\SQLitePCLRaw.provider.dynamic_cdecl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App\Contracts\IController.vb" />
+    <Compile Include="App\Contracts\IDatabase.vb" />
+    <Compile Include="App\Controllers\AuthController.vb" />
+    <Compile Include="App\Controllers\GroupController.vb" />
+    <Compile Include="App\Controllers\NoteController.vb" />
+    <Compile Include="App\Controllers\TodoController.vb" />
+    <Compile Include="App\Controllers\TodosListController.vb" />
+    <Compile Include="App\Controllers\UserController.vb" />
+    <Compile Include="App\Databases\Database.vb" />
+    <Compile Include="App\Enums\Modifier.vb" />
+    <Compile Include="App\Enums\NoteType.vb" />
+    <Compile Include="App\Enums\TodoType.vb" />
+    <Compile Include="App\Enums\UserType.vb" />
+    <Compile Include="App\Extensions\GlobalExtensions.vb" />
+    <Compile Include="App\Models\BaseModel.vb" />
+    <Compile Include="App\Models\Group.vb" />
+    <Compile Include="App\Models\Note.vb" />
+    <Compile Include="App\Models\Todo.vb" />
+    <Compile Include="App\Models\TodoList.vb" />
+    <Compile Include="App\Models\User.vb" />
+    <Compile Include="App\Types\GroupEventArgs.vb" />
+    <Compile Include="App\Types\NoteEventArgs.vb" />
+    <Compile Include="App\Types\Singleton.vb" />
+    <Compile Include="App\Types\TodoEventArgs.vb" />
+    <Compile Include="App\Types\TodoListEventArgs.vb" />
+    <Compile Include="App\Utils\Colors.vb" />
+    <Compile Include="App\Utils\Messages.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Views\Auth\LoginForm.Designer.vb">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Auth\LoginForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Auth\RegisterForm.Designer.vb">
+      <DependentUpon>RegisterForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Auth\RegisterForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Components\TodoItem.Designer.vb">
+      <DependentUpon>TodoItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\TodoItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\TodoListItem.Designer.vb">
+      <DependentUpon>TodoListItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\TodoListItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\GroupItem.Designer.vb">
+      <DependentUpon>GroupItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\GroupItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Components\NoteItem.Designer.vb">
+      <DependentUpon>NoteItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\NoteItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Dialogs\TodoDialog.Designer.vb">
+      <DependentUpon>TodoDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dialogs\TodoDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Dialogs\GroupDialog.Designer.vb">
+      <DependentUpon>GroupDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dialogs\GroupDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Dialogs\NoteDialog.Designer.vb">
+      <DependentUpon>NoteDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dialogs\NoteDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Dialogs\TodoListDialog.Designer.vb">
+      <DependentUpon>TodoListDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dialogs\TodoListDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AboutDialog.Designer.vb">
+      <DependentUpon>AboutDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AboutDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\TodoViewer.Designer.vb">
+      <DependentUpon>TodoViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TodoViewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\TasksUserControl.Designer.vb">
+      <DependentUpon>TasksUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TasksUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\NotesUserControl.Designer.vb">
+      <DependentUpon>NotesUserControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NotesUserControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\NoteViewer.Designer.vb">
+      <DependentUpon>NoteViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NoteViewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Auth\LoginForm.resx">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Auth\RegisterForm.resx">
+      <DependentUpon>RegisterForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\TodoItem.resx">
+      <DependentUpon>TodoItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\TodoListItem.resx">
+      <DependentUpon>TodoListItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\GroupItem.resx">
+      <DependentUpon>GroupItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Components\NoteItem.resx">
+      <DependentUpon>NoteItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Dialogs\TodoDialog.resx">
+      <DependentUpon>TodoDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Dialogs\GroupDialog.resx">
+      <DependentUpon>GroupDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Dialogs\NoteDialog.resx">
+      <DependentUpon>NoteDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Dialogs\TodoListDialog.resx">
+      <DependentUpon>TodoListDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AboutDialog.resx">
+      <DependentUpon>AboutDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TodoViewer.resx">
+      <DependentUpon>TodoViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TasksUserControl.resx">
+      <DependentUpon>TasksUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NotesUserControl.resx">
+      <DependentUpon>NotesUserControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NoteViewer.resx">
+      <DependentUpon>NoteViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="icons_goodnotes.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
